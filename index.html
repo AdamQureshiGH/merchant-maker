@@ -29,7 +29,7 @@
 async function startGame() {
     await cheerpjInit({ version: 17 });
     cheerpjCreateDisplay(800, 600);
-    await cheerpjRunJar("https://adamqureshigh.github.io/merchant-maker/game.jar");
+    await cheerpjRunJar("/app/merchant-maker/game.jar");
 }
 
 window.onload = startGame;
