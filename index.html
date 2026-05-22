@@ -1,27 +1,41 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Merchant Maker</title>
-<script src="https://cjrtnc.leaningtech.com/4.3/loader.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merchant Maker</title>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #111;
-        color: white;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        font-family: monospace;
-    }
+    <script src="https://cjrtnc.leaningtech.com/4.3/loader.js"></script>
 
-    #terminal {
-        width: 800px;
-        height: 600px;
-        margin: 30px auto;
-        background-color: black;
-        color: white;
-        font-family: monospace;
-        font-size: 16px;
-        overflow: auto;
-    }
-</style>
-</head> <body> <div id="terminal"></div> <script> async function startGame() { await cheerpjInit({ version: 17 }); cheerpjCreateConsole(document.getElementById("terminal")); await cheerpjRunJar("/app/merchant-maker/game.jar"); } window.onload = startGame; </script> </body> </html>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<script>
+async function startGame() {
+    await cheerpjInit({
+        version: 17
+    });
+
+    cheerpjCreateDisplay(800, 600);
+
+    await cheerpjRunJar("/app/merchant-maker/game.jar");
+}
+
+window.onload = startGame;
+</script>
+
+</body>
+</html>
